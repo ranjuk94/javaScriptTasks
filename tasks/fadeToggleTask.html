@@ -1,0 +1,28 @@
+<!-- When the button is clicked, hide and show a div with the class .content using the fadeToggle() function. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".div1").fadeToggle();
+   
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button>Click to fade in/out boxes</button><br><br>
+
+<div class="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div class="div1" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+
+</body>
+</html>

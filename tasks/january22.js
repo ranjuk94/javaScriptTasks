@@ -7,7 +7,23 @@ console.log(str1.toUpperCase())
 let str2 = 'JavaScript is a programming language'
 console.log(str2.includes('JavaScript'))
 
-//Write a JavaScript function that takes a string and returns a new string with all vowels 
-let str3 = 'the vowels are '
-let str4 = 'a,e,i,o,u'
-console.log(str3+str4)
+//Write a JavaScript function that takes a string and returns a new string with all vowels removed.  
+function removeVowels(input) {
+    const vowels = "aeiouAEIOU";
+    let result = "";
+  
+    for (let i = 0; i < input.length; i++) {
+      if (!vowels.includes(input[i])) {
+        result += input[i];
+      }
+    }
+  
+    return result;
+  }
+  
+  // Example usage
+  console.log(removeVowels("hello world")); // "hll wrld"
+ 
+  
+  
+  
