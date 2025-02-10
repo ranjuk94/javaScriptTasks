@@ -24,6 +24,17 @@ function removeDuplicates(arr) {
 console.log(removeDuplicates(arr));
 
 //Write a function to return the factorial of a given number.
+function factorialIterative(n) {
+    if (n < 0) return "Invalid input";
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+console.log(factorialIterative(3)); // Output: 120
+
 
 
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive jQuery Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .content {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: royalblue;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton">Toggle Content</button>
+    <button id="slideButton">Slide Content</button>
+    
+    <div class="content">Hello, I am a div!</div>
+    
+    <div class="box">Hover me!</div>
+
+    <script>
+        $(document).ready(function() {
+            // a) Toggle content visibility using fadeToggle()
+            $("#toggleButton").click(function() {
+                $(".content").fadeToggle();
+            });
+
+            // b) Change box background color on hover
+            $(".box").hover(
+                function() {
+                    $(this).css("background-color", "red"); // Mouse enter
+                },
+                function() {
+                    $(this).css("background-color", "orange"); // Mouse leave
+                }
+            );
+
+            // c) Slide the .content div up or down using animate()
+            $("#slideButton").click(function() {
+                $(".content").animate({
+                    height: "toggle"
+                }, 500); // Custom speed of 500ms
+            });
+        });
+    </script>
+
+</body>
+</html>
